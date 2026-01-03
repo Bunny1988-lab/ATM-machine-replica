@@ -3,7 +3,8 @@
 
 
 pin = "8899"
-balance_file = "balance.txt"
+balance_file = "balance_file.txt"
+history_file = "transaction_history.txt"
 
 def load_balance():
     try:
@@ -77,8 +78,7 @@ def transaction_history():
     try:
         with open("transaction_history.txt", "r") as f:
             print("----Transaction History----")
-            with open("transaction_log.txt", "r") as f:
-                print(f.read())
+            print(f.read())
     except FileNotFoundError:
         print("No transaction history found.")
 
@@ -117,3 +117,4 @@ if __name__ == "__main__":
     
 
     
+
